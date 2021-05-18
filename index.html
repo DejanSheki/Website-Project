@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body data-barba="wrapper">
     <header class="nav-header">
         <h1><a href="./index.html" id="logo">days.</a></h1>
         <div class="burger">
@@ -19,7 +19,7 @@
             <div class="line2"></div>
         </div>
     </header>
-    <main>
+    <main data-barba="container" data-barba-namespace="home">
         <section class="mountian slide">
             <div class="hero-img">
                 <img src="./img/forest.png" alt="Forset">
@@ -61,7 +61,7 @@
                     <div class="title-swipe t-swipe3"></div>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dicta numquam error, facilis adipisci sunt ut fugit sequi est esse.</p>
-                <a class="explore fashion-exp">Explore</a>
+                <a href="./fashion/index.html" class="explore fashion-exp">Explore</a>
                 <div class="reveal-text"></div>
             </div>
         </section>
@@ -84,6 +84,8 @@
     <div class="swipe swipe2"></div>
     <div class="swipe swipe3"></div>
 
+
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
