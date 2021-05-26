@@ -55,9 +55,16 @@ const mouse = document.querySelector(".cursor");
 const mouseText = mouse.querySelector('span');
 const burger = document.querySelector('.burger');
 
+// document.addEventListener('mousemove', (e) => {
+//     console.log(e.clientY);
+//     mouse.style.cssText = `
+//     left: ${e.clientX - 25}px;
+//     top: ${e.clientY - 25} px;
+//     `;
+// });
 function cursor(e) {
-    mouse.style.top = e.pageY + 'px';
-    mouse.style.left = e.pageX + 'px';
+    mouse.style.top = `${e.clientY}px`;
+    mouse.style.left = `${e.clientX}px`;
 }
 function activeCursor(e) {
     const item = e.target;

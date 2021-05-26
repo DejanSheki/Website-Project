@@ -14,6 +14,7 @@ body {
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     position: relative;
+    cursor: none;
 }
 
 main {
@@ -175,7 +176,9 @@ main {
     height: 3rem;
     border: 2px solid var(--white);
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: all 0.5s ease-in-out;
