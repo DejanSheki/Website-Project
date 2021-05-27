@@ -70,12 +70,15 @@ function activeCursor(e) {
     const item = e.target;
     if (item.id === "logo" || item.classList.contains("burger")) {
         mouse.classList.add("nav-active");
+        gsap.to(".center", 0.1, { width: '0rem', heigth: '0rem' });
     } else {
         mouse.classList.remove("nav-active");
+        gsap.to(".center", 0.1, { width: '0.5rem', heigth: '0.5rem' });
     }
     if (item.classList.contains("explore")) {
         mouse.classList.add("explore-active");
         gsap.to(".title-swipe", 1, { y: '0%' });
+        gsap.to(".center", 0.1, { width: '0rem', heigth: '0rem' });
         mouseText.innerText = 'Tap';
     } else {
         mouse.classList.remove("explore-active");
@@ -86,6 +89,8 @@ function activeCursor(e) {
 function navToggle(e) {
     if (!e.target.classList.contains('active')) {
         e.target.classList.add('active');
+        gsap.to('body', 0.5, { cursor: 'auto' });
+        gsap.to('.center', 0.5, { background: "var(--black)" });
         gsap.to('.line1', 0.5, { rotate: '45', y: 5, background: "var(--black)" });
         gsap.to('.line2', 0.5, { rotate: '-45', y: -5, background: 'var(--black)' });
         gsap.to('#logo', 0.5, { color: 'var(--black)' });
@@ -93,6 +98,8 @@ function navToggle(e) {
         document.body.classList.add('hide');
     } else {
         e.target.classList.remove('active');
+        gsap.to('body', 0.5, { cursor: 'none' });
+        gsap.to('.center', 0.5, { background: "var(--white)" });
         gsap.to('.line1', 0.5, { rotate: '0', y: 0, background: "var(--white)" });
         gsap.to('.line2', 0.5, { rotate: '0', y: 0, background: 'var(--white)' });
         gsap.to('#logo', 0.5, { color: 'var(--white)' });
